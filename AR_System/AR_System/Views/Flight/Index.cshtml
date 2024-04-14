@@ -1,0 +1,46 @@
+﻿<div class="pagetitle">
+    <h1>Dashboard</h1>
+    <nav>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item active">Flights</li>
+        </ol>
+    </nav>
+</div><!-- End Page Title -->
+
+<section class="section dashboard">
+    <div class="row">
+        <div class="col-12">
+            <div class="card top-selling overflow-auto">
+
+                <div class="card-body pb-0">
+                    <table class="table table-borderless">
+                        <thead>
+                            <tr>
+                                <th scope="col">Id</th>
+                                <th scope="col">Flight Name</th>
+                                <th scope="col">Flight Number</th>
+                                <th scope="col">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var flight in ViewBag.flights)
+                            {
+                                <tr>
+                                    <td>@flight.Id</td>
+                                    <td>@flight.Name</td>
+                                    <td>@flight.FlightNumber</td>
+                                    <td>
+                                        <a asp-action="Edit" asp-route-id="@flight.Id"><i class="bi bi-pencil text-primary" style="cursor:pointer"></i></a>
+                                        <a asp-action="Delete" asp-route-id="@flight.Id"><i class="bi bi-trash text-danger mx-3" style="cursor:pointer"></i></a>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+
+                </div>
+
+            </div>
+        </div><!-- End Top Selling -->
+    </div>

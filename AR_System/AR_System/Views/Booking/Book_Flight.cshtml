@@ -1,0 +1,161 @@
+﻿ <!-- Common Banner Area -->
+<section id="common_banner">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="common_bannner_text">
+                    <h2>Flight submission</h2>
+                    <ul>
+                        <li><a href="index-2.html">Home</a></li>
+                        <li>
+                            <span><i class="fas fa-circle"></i></span><a href="flight-search-result.html">
+                                Flight
+                                search
+                            </a>
+                        </li>
+                        <li><span><i class="fas fa-circle"></i></span> Flight booking</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Tour Booking Submission Areas -->
+<section id="tour_booking_submission" class="section_padding">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="tou_booking_form_Wrapper">
+                    <form asp-controller="Booking" asp-action="Book_Flight">
+                        @model AR_System.Models.Booking
+                    <div class="booking_tour_form">
+                        <h3 class="heading_theme">Passenger information</h3>
+                        <div class="tour_booking_form_box">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                        <div class="form-group">
+                                            <select class="form-control form-select bg_input" asp-for="TicketClass" required>
+                                                @if (ViewBag.ticketclasses != null && ViewBag.ticketclasses.Count > 0)
+                                                {
+                                                    foreach (var ticketClass in ViewBag.ticketclasses)
+                                                    {
+                                                        <option value="@ticketClass.EconomyPrice">
+                                                            Economy Class $@ticketClass.EconomyPrice
+                                                        </option>
+                                                        <option value="@ticketClass.FirstClassPrice">
+                                                            First Class $@ticketClass.FirstClassPrice
+                                                        </option>
+                                                        <option value="@ticketClass.BusinessPrice">
+                                                            Business Class $@ticketClass.BusinessPrice
+                                                        </option>
+                                                    }
+                                                }
+                                                else
+                                                {
+                                                    <option value="">No ticket classes available</option>
+                                                }
+                                            </select>
+                                        </div>
+
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="form-group">
+                                            <input inputmode="numeric" required class="form-control bg_input" asp-for="NoOfTickets"
+                                               placeholder="Number of tickets*">
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="form-group">
+                                        <input  required class="form-control bg_input" asp-for="PassportNumber"
+                                               placeholder="Passport no.">
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="form-group">
+                                            <input  class="form-control bg_input" required placeholder="Visa no." asp-for="VisaNumber">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                        <div class="booking_tour_form">
+                            <h3 class="heading_theme">Payment method</h3>
+                            <div class="tour_booking_form_box">
+                                <div class="booking_payment_boxed">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" asp-for="PaymentMethod" name="flexRadioDefault"
+                                               id="flexRadioDefault1" value="Payment by card">
+                                            <label class="form-check-label" for="flexRadioDefault1">
+                                                Payment by card
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" asp-for="PaymentMethod" name="flexRadioDefault"
+                                               id="flexRadioDefault2" value="Paypal">
+                                            <label class="form-check-label" for="flexRadioDefault2">
+                                                Paypal
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                        <input class="form-check-input" type="radio" asp-for="PaymentMethod" name="flexRadioDefault"
+                                               id="flexRadioDefault3" value="Payoneer">
+                                            <label class="form-check-label" for="flexRadioDefault3">
+                                                Payoneer
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                        <input class="form-check-input" type="radio" asp-for="PaymentMethod" name="flexRadioDefault"
+                                               id="flexRadioDefault4" value="Cash on delivery">
+                                            <label class="form-check-label" for="flexRadioDefault4">
+                                                Cash on delivery
+                                            </label>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                    <div class="booking_tour_form_submit">
+                        <div class="form-check write_spical_check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefaultf1" required>
+                            <label class="form-check-label" for="flexCheckDefaultf1">
+                                I read and accept all <a href="terms-service.html">Terms and conditions</a>
+
+                            </label>
+                        </div>
+                        <button type="submit"  class="btn btn_theme btn_md">Book Flight</button>
+                    </div>
+                </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Cta Area -->
+<section id="cta_area">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-7">
+                <div class="cta_left">
+                    <div class="cta_icon">
+                        <img src="~/assets/img/common/email.png" alt="icon">
+                    </div>
+                    <div class="cta_content">
+                        <h4>Get the latest news and offers</h4>
+                        <h2>Subscribe to our newsletter</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5">
+                <div class="cat_form">
+                    <div class="input-group">
+                        <input type="text" class="form-control"
+                               placeholder="Enter your mail address"><button class="btn btn_theme btn_md" type="button">
+                            Subscribe
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

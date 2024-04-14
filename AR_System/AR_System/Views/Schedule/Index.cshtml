@@ -1,0 +1,54 @@
+﻿<div class="pagetitle">
+    <h1>Dashboard</h1>
+    <nav>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item active">Fligh Schedule</li>
+        </ol>
+    </nav>
+</div><!-- End Page Title -->
+
+<section class="section dashboard">
+    <div class="row">
+        <div class="col-12">
+            <div class="card top-selling overflow-auto">
+
+                <div class="card-body pb-0">
+                    <table class="table table-borderless">
+                        <thead>
+                            <tr>
+                                <th scope="col">Flight id</th>
+                                <th scope="col">From</th>
+                                <th scope="col">To</th>
+                                <th scope="col">Departure time</th>
+                                <th scope="col">Arrival time</th>
+                                <th scope="col">Stops</th>
+                                <th scope="col">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var flightschedule in ViewBag.flightschedule)
+                            {
+
+
+                                <tr>
+                                    <td>@flightschedule.Flight.FlightNumber</td>
+                                    <td>@flightschedule.FromCity.CityName</td>
+                                    <td>@flightschedule.ToCity.CityName</td>
+                                    <td>@flightschedule.DepartureTime</td>
+                                    <td>@flightschedule.ArrivalTime</td>
+                                    <td>@flightschedule.Stops</td>
+                                    <td>
+                                        <a asp-action="Edit" asp-route-id="@flightschedule.Id"><i class="bi bi-pencil text-primary" style="cursor:pointer"></i></a>
+                                        <a asp-action="Delete" asp-route-id="@flightschedule.Id"><i class="bi bi-trash text-danger mx-3" style="cursor:pointer"></i></a>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+
+                </div>
+
+            </div>
+        </div><!-- End Top Selling -->
+    </div>

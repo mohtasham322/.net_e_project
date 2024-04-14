@@ -1,0 +1,64 @@
+﻿@{
+    Layout = "_AdminLayout";
+}
+<div class="pagetitle">
+    <h1>Dashboard</h1>
+    <nav>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item active">Bookings</li>
+        </ol>
+    </nav>
+</div><!-- End Page Title -->
+
+<section class="section dashboard">
+    <div class="row">
+        <div class="col-12">
+            <div class="card top-selling overflow-auto">
+
+                <div class="card-body pb-0">
+                    <table class="table table-borderless">
+                        <thead>
+                            <tr>
+                                <th scope="col">FirstName</th>
+                                <th scope="col">LastName</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">From</th>
+                                <th scope="col">To</th>
+                                <th scope="col">Departure</th>
+                                <th scope="col">Arrival</th>
+                                <th scope="col">Ticket Class</th>
+                                <th scope="col">No of tickets</th>
+                                <th scope="col">Visa</th>
+                                <th scope="col">Passport</th>
+                                <th scope="col">Payment Method</th>
+                                <th scope="col">Booking Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach(var booking in ViewBag.bookings)
+                            {
+                                <tr>
+                                    <td>@booking.User.FirstName</td>
+                                    <td>@booking.User.LastName</td>
+                                    <td>@booking.User.Email</td>
+                                    <td>@booking.Schedule.FromCity.CityName</td>
+                                    <td>@booking.Schedule.ToCity.CityName</td>
+                                    <td>@booking.Schedule.DepartureTime</td>
+                                    <td>@booking.Schedule.ArrivalTime</td>
+                                    <td>@booking.TicketClass </td>
+                                    <td>@booking.NoOfTickets</td>
+                                    <td>@booking.VisaNumber</td>
+                                    <td>@booking.PassportNumber</td>
+                                    <td>@booking.PaymentMethod</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+
+                </div>
+
+            </div>
+        </div><!-- End Top Selling -->
+    </div>
+

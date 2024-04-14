@@ -1,0 +1,38 @@
+﻿<div class="pagetitle">
+    <h1>Dashboard</h1>
+    <nav>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item active">Locations</li>
+        </ol>
+    </nav>
+</div><!-- End Page Title -->
+
+<section class="section dashboard">
+    <div class="row">
+        <div class="col-12">
+            <div class="card top-selling overflow-auto">
+
+                <div class="card-body pb-4">
+                            <h5 class="card-title">Add Location</h5>
+                            @model AR_System.Models.CityWay
+                            <!-- Vertical Form -->
+                            <form method="post" class="row g-3">
+                                <div class="col-12">
+                                    <label asp-for="CityName" class="form-label">City Name</label>
+                                    <input asp-for="CityName" class="form-control">
+                                    <span asp-validation-for="CityName" class="text-danger"></span>
+                                </div>
+                                <div class="col-12">
+                                    <label asp-for="PortName" class="form-label">Port Name</label>
+                                    <input class="form-control" asp-for="PortName">
+                                    <span asp-validation-for="PortName" class="text-danger"></span>
+                                </div>
+                                <div class="text-right">
+                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                    <button type="reset" class="btn btn-secondary">Reset</button>
+                                </div>
+                            </form><!-- Vertical Form -->
+
+ 
+                </div>

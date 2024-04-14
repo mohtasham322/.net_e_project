@@ -1,0 +1,81 @@
+﻿@{
+    Layout = "_AdminLayout";
+}
+<div class="pagetitle">
+    <h1>Dashboard</h1>
+    <nav>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item active">Customers</li>
+        </ol>
+    </nav>
+</div><!-- End Page Title -->
+
+<section class="section dashboard">
+    <div class="row">
+        <div class="col-12">
+            <div class="card top-selling overflow-auto">
+
+                <div class="card-body pb-0">
+                    <table class="table table-borderless">
+                        <thead>
+                            <tr>
+                                <th scope="col">Id</th>
+                                <th scope="col">FirstName</th>
+                                <th scope="col">LastName</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">Address</th>
+                                <th scope="col">Phone no</th>
+                                <th scope="col">Sex</th>
+                                <th scope="col">Age</th>
+                                <th scope="col">Role</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var customers in ViewBag.customers)
+                            {
+                                string rowBackgroundColor = customers.RoleId == 2 ? "green" : "";
+                                <tr style="background-color:@rowBackgroundColor">
+                                    <td>@customers.Id</td>
+                                    <td>@customers.FirstName</td>
+                                    <td>@customers.LastName</td>
+                                    <td>@customers.Email</td>
+                                    <td>@customers.Address</td>
+                                    <td>@customers.PhoneNumber</td>
+                                    <td>
+                                        @{
+                                            int sexValue;
+                                            if (int.TryParse(customers.Sex, out sexValue))
+                                            {
+                                                if (sexValue == 1)
+                                                {
+                                                    @:Male
+                                                }
+                                                else if (sexValue == 2)
+                                                {
+                                                    @:Female
+                                                }
+                                                else
+                                                {
+                                                    @:No defined
+                                                }
+                                            }
+                                            else
+                                            {
+                                                @:Invalid
+                                            }
+                                        }
+                                    </td>
+                                    <td>@customers.Age</td>
+                                    <td>@customers.Role.Name</td>
+                                </tr>
+                              }
+                        </tbody>
+                    </table>
+
+                </div>
+
+            </div>
+        </div><!-- End Top Selling -->
+    </div>
+

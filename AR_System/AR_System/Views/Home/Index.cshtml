@@ -1,0 +1,1176 @@
+﻿
+<!-- Banner Area -->
+<section id="home_five_banner">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <div class="banner_five_text">
+                    <h1>LETS TRAVEL THE WORLD WITH US</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur. Amet enim tincidunt mauris tellus nunc eleifend.
+                        Odio suspendisse ut arcu eget enim vulputate.
+                    </p>
+                    <div class="home_five_btn btn-animation">
+                        <a class="btn btn_theme_transparent btn_md" href="about.html">
+                            Explore more <i class="fas fa-arrow-right ms-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="banner_five_img">
+                    <img src="~/assets/img/home-five/common/banner-five-img.png" alt="img">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Form Area -->
+<section id="theme_search_form_five">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="theme_search_form_area">
+                    <div class="theme_search_form_tabbtn">
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="flights-tab" data-bs-toggle="tab"
+                                        data-bs-target="#flights" type="button" role="tab" aria-controls="flights"
+                                        aria-selected="true">
+                                    <i class="fas fa-plane-departure"></i>Flights
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="flights" role="tabpanel"
+                             aria-labelledby="flights-tab">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="flight_categories_search">
+                                        <ul class="nav nav-tabs" role="tablist">
+                                            <li class="nav-item" role="presentation">
+                                                <button class="nav-link active" id="oneway-tab" data-bs-toggle="tab"
+                                                        data-bs-target="#oneway_flight" type="button" role="tab"
+                                                        aria-controls="oneway_flight" aria-selected="true">
+                                                    One
+                                                    Way
+                                                </button>
+                                            </li>
+                                            <li class="nav-item" role="presentation">
+                                                <button class="nav-link" id="roundtrip-tab" data-bs-toggle="tab"
+                                                        data-bs-target="#roundtrip" type="button" role="tab"
+                                                        aria-controls="roundtrip"
+                                                        aria-selected="false">
+                                                    Roundtrip
+                                                </button>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-content" id="myTabContent1">
+                                <div class="tab-pane fade show active" id="oneway_flight" role="tabpanel"
+                                     aria-labelledby="oneway-tab">
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="oneway_search_form">
+                                                <form asp-controller="Search" asp-action="Search_Flight">
+                                                    <div class="row">
+                                                        <div class="col-lg-3 col-md-6 col-sm-12 col-12">
+                                                            <div class="flight_Search_boxed">
+                                                                <p>From</p>
+                                                                <input type="text" value="London">
+                                                                <span>London Southend</span>
+                                                                <div class="plan_icon_posation">
+                                                                    <i class="fas fa-plane-departure"></i>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-3 col-md-6 col-sm-12 col-12">
+                                                            <div class="flight_Search_boxed">
+                                                                <p>To</p>
+                                                                <input type="text" value="Karachi">
+                                                                <span>Jinnah International Airport</span>
+                                                                <div class="plan_icon_posation">
+                                                                    <i class="fas fa-plane-arrival"></i>
+                                                                </div>
+                                                                <div class="range_plan">
+                                                                    <i class="fas fa-exchange-alt"></i>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-4  col-md-6 col-sm-12 col-12">
+                                                            <div class="form_search_date">
+                                                                <div class="flight_Search_boxed date_flex_area">
+                                                                    <div class="Journey_date">
+                                                                        <p>Journey date</p>
+                                                                        <input type="date" value="2022-05-05">
+                                                                        <span>Thursday</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-2  col-md-6 col-sm-12 col-12">
+                                                            <div class="flight_Search_boxed dropdown_passenger_area">
+                                                                <p>Passenger, Class </p>
+                                                                <div class="dropdown">
+                                                                    <button class="dropdown-toggle final-count"
+                                                                            data-toggle="dropdown" type="button"
+                                                                            id="dropdownMenuButton1"
+                                                                            data-bs-toggle="dropdown"
+                                                                            aria-expanded="false">
+                                                                        0 Passenger
+                                                                    </button>
+                                                                    <div class="dropdown-menu dropdown_passenger_info"
+                                                                         aria-labelledby="dropdownMenuButton1">
+                                                                        <div class="traveller-calulate-persons">
+                                                                            <div class="passengers">
+                                                                                <h6>Passengers</h6>
+                                                                                <div class="passengers-types">
+                                                                                    <div class="passengers-type">
+                                                                                        <div class="text">
+                                                                                            <span class="count pcount">2</span>
+                                                                                            <div class="type-label">
+                                                                                                <p>Adult</p>
+                                                                                                <span>
+                                                                                                    12+
+                                                                                                    yrs
+                                                                                                </span>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="button-set">
+                                                                                            <button type="button"
+                                                                                                    class="btn-add">
+                                                                                                <i class="fas fa-plus"></i>
+                                                                                            </button>
+                                                                                            <button type="button"
+                                                                                                    class="btn-subtract">
+                                                                                                <i class="fas fa-minus"></i>
+                                                                                            </button>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="passengers-type">
+                                                                                        <div class="text">
+                                                                                            <span class="count ccount">0</span>
+                                                                                            <div class="type-label">
+                                                                                                <p class="fz14 mb-xs-0">
+                                                                                                    Children
+                                                                                                </p><span>
+                                                                                                    2
+                                                                                                    - Less than 12
+                                                                                                    yrs
+                                                                                                </span>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="button-set">
+                                                                                            <button type="button"
+                                                                                                    class="btn-add-c">
+                                                                                                <i class="fas fa-plus"></i>
+                                                                                            </button>
+                                                                                            <button type="button"
+                                                                                                    class="btn-subtract-c">
+                                                                                                <i class="fas fa-minus"></i>
+                                                                                            </button>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="passengers-type">
+                                                                                        <div class="text">
+                                                                                            <span class="count incount">0</span>
+                                                                                            <div class="type-label">
+                                                                                                <p class="fz14 mb-xs-0">
+                                                                                                    Infant
+                                                                                                </p><span>
+                                                                                                    Less
+                                                                                                    than 2
+                                                                                                    yrs
+                                                                                                </span>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="button-set">
+                                                                                            <button type="button"
+                                                                                                    class="btn-add-in">
+                                                                                                <i class="fas fa-plus"></i>
+                                                                                            </button>
+                                                                                            <button type="button"
+                                                                                                    class="btn-subtract-in">
+                                                                                                <i class="fas fa-minus"></i>
+                                                                                            </button>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="cabin-selection">
+                                                                                <h6>Cabin Class</h6>
+                                                                                <div class="cabin-list">
+                                                                                    <button type="button"
+                                                                                            class="label-select-btn">
+                                                                                        <span class="muiButton-label">
+                                                                                            Economy
+                                                                                        </span>
+                                                                                    </button>
+                                                                                    <button type="button"
+                                                                                            class="label-select-btn active">
+                                                                                        <span class="muiButton-label">
+                                                                                            Business
+                                                                                        </span>
+                                                                                    </button>
+                                                                                    <button type="button"
+                                                                                            class="label-select-btn">
+                                                                                        <span class="MuiButton-label">
+                                                                                            First
+                                                                                            Class
+                                                                                        </span>
+                                                                                    </button>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <span>Business</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="top_form_search_button">
+                                                            <button class="btn btn_theme btn_md">Search</button>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="roundtrip" role="tabpanel"
+                                     aria-labelledby="roundtrip-tab">
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="oneway_search_form">
+                                                <form action="#!">
+                                                    <div class="row">
+                                                        <div class="col-lg-3  col-md-6 col-sm-12 col-12">
+                                                            <div class="flight_Search_boxed">
+                                                                <p>From</p>
+                                                                <input type="text" value="New York">
+                                                                <span>JFK - John F. Kennedy International...</span>
+                                                                <div class="plan_icon_posation">
+                                                                    <i class="fas fa-plane-departure"></i>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-3  col-md-6 col-sm-12 col-12">
+                                                            <div class="flight_Search_boxed">
+                                                                <p>To</p>
+                                                                <input type="text" value="London ">
+                                                                <span>LCY, London city airport </span>
+                                                                <div class="plan_icon_posation">
+                                                                    <i class="fas fa-plane-arrival"></i>
+                                                                </div>
+                                                                <div class="range_plan">
+                                                                    <i class="fas fa-exchange-alt"></i>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-4  col-md-6 col-sm-12 col-12">
+                                                            <div class="form_search_date">
+                                                                <div class="flight_Search_boxed date_flex_area">
+                                                                    <div class="Journey_date">
+                                                                        <p>Journey date</p>
+                                                                        <input type="date" value="2022-05-05">
+                                                                        <span>Thursday</span>
+                                                                    </div>
+                                                                    <div class="Journey_date">
+                                                                        <p>Return date</p>
+                                                                        <input type="date" value="2022-05-08">
+                                                                        <span>Saturday</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-2  col-md-6 col-sm-12 col-12">
+                                                            <div class="flight_Search_boxed dropdown_passenger_area">
+                                                                <p>Passenger, Class </p>
+                                                                <div class="dropdown">
+                                                                    <button class="dropdown-toggle final-count"
+                                                                            data-toggle="dropdown" type="button"
+                                                                            id="dropdownMenuButton1"
+                                                                            data-bs-toggle="dropdown"
+                                                                            aria-expanded="false">
+                                                                        0 Passenger
+                                                                    </button>
+                                                                    <div class="dropdown-menu dropdown_passenger_info"
+                                                                         aria-labelledby="dropdownMenuButton1">
+                                                                        <div class="traveller-calulate-persons">
+                                                                            <div class="passengers">
+                                                                                <h6>Passengers</h6>
+                                                                                <div class="passengers-types">
+                                                                                    <div class="passengers-type">
+                                                                                        <div class="text">
+                                                                                            <span class="count pcount">2</span>
+                                                                                            <div class="type-label">
+                                                                                                <p>Adult</p>
+                                                                                                <span>
+                                                                                                    12+
+                                                                                                    yrs
+                                                                                                </span>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="button-set">
+                                                                                            <button type="button"
+                                                                                                    class="btn-add">
+                                                                                                <i class="fas fa-plus"></i>
+                                                                                            </button>
+                                                                                            <button type="button"
+                                                                                                    class="btn-subtract">
+                                                                                                <i class="fas fa-minus"></i>
+                                                                                            </button>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="passengers-type">
+                                                                                        <div class="text">
+                                                                                            <span class="count ccount">0</span>
+                                                                                            <div class="type-label">
+                                                                                                <p class="fz14 mb-xs-0">
+                                                                                                    Children
+                                                                                                </p><span>
+                                                                                                    2
+                                                                                                    - Less than 12
+                                                                                                    yrs
+                                                                                                </span>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="button-set">
+                                                                                            <button type="button"
+                                                                                                    class="btn-add-c">
+                                                                                                <i class="fas fa-plus"></i>
+                                                                                            </button>
+                                                                                            <button type="button"
+                                                                                                    class="btn-subtract-c">
+                                                                                                <i class="fas fa-minus"></i>
+                                                                                            </button>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="passengers-type">
+                                                                                        <div class="text">
+                                                                                            <span class="count incount">0</span>
+                                                                                            <div class="type-label">
+                                                                                                <p class="fz14 mb-xs-0">
+                                                                                                    Infant
+                                                                                                </p><span>
+                                                                                                    Less
+                                                                                                    than 2
+                                                                                                    yrs
+                                                                                                </span>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="button-set">
+                                                                                            <button type="button"
+                                                                                                    class="btn-add-in">
+                                                                                                <i class="fas fa-plus"></i>
+                                                                                            </button>
+                                                                                            <button type="button"
+                                                                                                    class="btn-subtract-in">
+                                                                                                <i class="fas fa-minus"></i>
+                                                                                            </button>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="cabin-selection">
+                                                                                <h6>Cabin Class</h6>
+                                                                                <div class="cabin-list">
+                                                                                    <button type="button"
+                                                                                            class="label-select-btn">
+                                                                                        <span class="muiButton-label">
+                                                                                            Economy
+                                                                                        </span>
+                                                                                    </button>
+                                                                                    <button type="button"
+                                                                                            class="label-select-btn active">
+                                                                                        <span class="muiButton-label">
+                                                                                            Business
+                                                                                        </span>
+                                                                                    </button>
+                                                                                    <button type="button"
+                                                                                            class="label-select-btn">
+                                                                                        <span class="MuiButton-label">
+                                                                                            First
+                                                                                            Class
+                                                                                        </span>
+                                                                                    </button>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <span>Business</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="top_form_search_button">
+                                                        <button class="btn btn_theme btn_md">Search</button>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- popular destination area -->
+<section id="popular_destination" class="section_padding_bottom">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="section_heading_five">
+                    <h5>Destination</h5>
+                    <h2>Popular destination</h2>
+                </div>
+            </div>
+        </div>
+        <div class="popular_destination_area">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+                    <div class="popular_destination_card">
+                        <div class="popular_destination_img">
+                            <img src="~/assets/img/home-five/destination/destination-card-1.png" alt="img">
+                            <div class="destination_ratings">
+                                <p><i class="fa fa-star"></i> <span>4.8</span></p>
+                            </div>
+                        </div>
+                        <div class="popular_destination_text">
+                            <h5><a href="top-destinations.html">Sydney - Best tourist place in Australia</a></h5>
+                            <a href="top-destinations.html"><img src="~/assets/img/icon/des-arrow.png" alt="icon"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+                    <div class="popular_destination_card destination_card_two">
+                        <div class="popular_destination_img">
+                            <img src="~/assets/img/home-five/destination/destination-card-2.png" alt="img">
+                            <div class="destination_ratings">
+                                <p><i class="fa fa-star"></i> <span>4.8</span></p>
+                            </div>
+                        </div>
+                        <div class="popular_destination_text">
+                            <h5><a href="top-destinations.html">Sydney - Best tourist place in Australia</a></h5>
+                            <a href="top-destinations.html"><img src="~/assets/img/icon/des-arrow.png" alt="icon"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+                    <div class="popular_destination_card">
+                        <div class="popular_destination_img">
+                            <img src="~/assets/img/home-five/destination/destination-card-3.png" alt="img">
+                            <div class="destination_ratings">
+                                <p><i class="fa fa-star"></i> <span>4.8</span></p>
+                            </div>
+                        </div>
+                        <div class="popular_destination_text">
+                            <h5><a href="top-destinations.html">Sydney - Best tourist place in Australia</a></h5>
+                            <a href="top-destinations.html"><img src="~/assets/img/icon/des-arrow.png" alt="icon"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+                    <div class="popular_destination_card destination_card_two">
+                        <div class="popular_destination_img">
+                            <img src="~/assets/img/home-five/destination/destination-card-4.png" alt="img">
+                            <div class="destination_ratings">
+                                <p><i class="fa fa-star"></i> <span>4.8</span></p>
+                            </div>
+                        </div>
+                        <div class="popular_destination_text">
+                            <h5><a href="top-destinations.html">Sydney - Best tourist place in Australia</a></h5>
+                            <a href="top-destinations.html"><img src="~/assets/img/icon/des-arrow.png" alt="icon"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- about section -->
+<section id="five_about_area" class="section_padding">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <div class="five_about_left">
+                    <div class="section_heading_five">
+                        <h5>About us</h5>
+                        <h2>
+                            We create journeys for the excited travels
+                            and value for money
+                        </h2>
+                        <p>
+                            Laboris anim duis sunt aliquip tempor qui. Est in nulla eiusmod ad aliqua laboris jugni
+                            lol occaecat excepteur voluptate minim.
+                        </p>
+                    </div>
+                    <div class="about_five_info">
+                        <div class="about_five_item about_item_one">
+                            <div class="hotel_img">
+                                <img src="~/assets/img/icon/best-hotel.png" alt="icon">
+                            </div>
+                            <div class="about_five_text">
+                                <h3>Best hotels</h3>
+                                <p>
+                                    Officia ad ad pariatur id eu ipsum excepteur incididunt eiusmod ad proident. Id
+                                    et tempor laboris irure quis adipisicing fugiat.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="about_five_item">
+                            <div class="flight_img">
+                                <img src="~/assets/img/icon/cheaf-flight.png" alt="icon">
+                            </div>
+                            <div class="about_five_text">
+                                <h3>Cheap flights</h3>
+                                <p>
+                                    Officia ad ad pariatur id eu ipsum excepteur incididunt eiusmod ad proident. Id
+                                    et tempor laboris irure quis adipisicing fugiat.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about_five_bottom">
+                        <div class="about_five_button">
+                            <a href="about.html" class="btn btn_theme btn_md">Learn more</a>
+                        </div>
+                        <div class="about_five_client">
+                            <img src="~/assets/img/home-five/common/about_clients.png" alt="img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="five_about_img">
+                    <img src="~/assets/img/home-five/common/about_five.png" alt="img">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- top place -->
+<section id="top_place" class="section_padding">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-12">
+                <div class="section_heading_five">
+                    <h5>Top places</h5>
+                    <h2>Top visiting places</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="common_card_five">
+                    <div class="common_card_five_img">
+                        <a href="tour-search.html">
+                            <img src="~/assets/img/tour/popular-1.png" alt="img">
+                        </a>
+                    </div>
+                    <div class="common_card_five_text">
+                        <ul class="common_card_five_list">
+                            <li>7 nights 8 days tour <i class="fas fa-circle"></i></li>
+                            <li>Family tour</li>
+                        </ul>
+                        <h3><a href="tour-search.html">London aliqua irure proident esse</a></h3>
+                        <p><i class="fas fa-map-marker-alt"></i>London, United Kingdom</p>
+                        <div class="common_card_five_bottom">
+                            <div class="common_card_five_bottom_left">
+                                <p>4.8/5 Excellent</p>
+                                <h6>(1214 reviewes)</h6>
+                            </div>
+                            <div class="common_card_five_bottom_right">
+                                <h4>$99.00 <sub>/Per person</sub></h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="common_card_five">
+                    <div class="common_card_five_img">
+                        <a href="tour-search.html">
+                            <img src="~/assets/img/tour/popular-2.png" alt="img">
+                        </a>
+                    </div>
+                    <div class="common_card_five_text">
+                        <ul class="common_card_five_list">
+                            <li>7 nights 8 days tour <i class="fas fa-circle"></i></li>
+                            <li>Family tour</li>
+                        </ul>
+                        <h3><a href="tour-search.html">Sydney irure dolor anim exerciton</a></h3>
+                        <p><i class="fas fa-map-marker-alt"></i>London, United Kingdom</p>
+                        <div class="common_card_five_bottom">
+                            <div class="common_card_five_bottom_left">
+                                <p>4.8/5 Excellent</p>
+                                <h6>(1214 reviewes)</h6>
+                            </div>
+                            <div class="common_card_five_bottom_right">
+                                <h4>$99.00 <sub>/Per person</sub></h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="common_card_five">
+                    <div class="common_card_five_img">
+                        <a href="tour-search.html">
+                            <img src="~/assets/img/tour/popular-3.png" alt="img">
+                        </a>
+                    </div>
+                    <div class="common_card_five_text">
+                        <ul class="common_card_five_list">
+                            <li>7 nights 8 days tour <i class="fas fa-circle"></i></li>
+                            <li>Family tour</li>
+                        </ul>
+                        <h3><a href="tour-search.html">Phuket non ullamco amet dolore</a></h3>
+                        <p><i class="fas fa-map-marker-alt"></i>London, United Kingdom</p>
+                        <div class="common_card_five_bottom">
+                            <div class="common_card_five_bottom_left">
+                                <p>4.8/5 Excellent</p>
+                                <h6>(1214 reviewes)</h6>
+                            </div>
+                            <div class="common_card_five_bottom_right">
+                                <h4>$99.00 <sub>/Per person</sub></h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="common_card_five">
+                    <div class="common_card_five_img">
+                        <a href="tour-search.html">
+                            <img src="~/assets/img/tour/popular-4.png" alt="img">
+                        </a>
+                    </div>
+                    <div class="common_card_five_text">
+                        <ul class="common_card_five_list">
+                            <li>7 nights 8 days tour <i class="fas fa-circle"></i></li>
+                            <li>Family tour</li>
+                        </ul>
+                        <h3><a href="tour-search.html">Gangtok magna amet voluptate</a></h3>
+                        <p><i class="fas fa-map-marker-alt"></i>London, United Kingdom</p>
+                        <div class="common_card_five_bottom">
+                            <div class="common_card_five_bottom_left">
+                                <p>4.8/5 Excellent</p>
+                                <h6>(1214 reviewes)</h6>
+                            </div>
+                            <div class="common_card_five_bottom_right">
+                                <h4>$99.00 <sub>/Per person</sub></h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="common_card_five">
+                    <div class="common_card_five_img">
+                        <a href="tour-search.html">
+                            <img src="~/assets/img/tour/popular-5.png" alt="img">
+                        </a>
+                    </div>
+                    <div class="common_card_five_text">
+                        <ul class="common_card_five_list">
+                            <li>7 nights 8 days tour <i class="fas fa-circle"></i></li>
+                            <li>Family tour</li>
+                        </ul>
+                        <h3><a href="tour-search.html">Ex fugiat labore magna</a></h3>
+                        <p><i class="fas fa-map-marker-alt"></i>London, United Kingdom</p>
+                        <div class="common_card_five_bottom">
+                            <div class="common_card_five_bottom_left">
+                                <p>4.8/5 Excellent</p>
+                                <h6>(1214 reviewes)</h6>
+                            </div>
+                            <div class="common_card_five_bottom_right">
+                                <h4>$99.00 <sub>/Per person</sub></h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="common_card_five">
+                    <div class="common_card_five_img">
+                        <a href="tour-search.html">
+                            <img src="~/assets/img/tour/popular-6.png" alt="img">
+                        </a>
+                    </div>
+                    <div class="common_card_five_text">
+                        <ul class="common_card_five_list">
+                            <li>7 nights 8 days tour <i class="fas fa-circle"></i></li>
+                            <li>Family tour</li>
+                        </ul>
+                        <h3><a href="tour-search.html">Culpa ut ad velit aliquip minim</a></h3>
+                        <p><i class="fas fa-map-marker-alt"></i>London, United Kingdom</p>
+                        <div class="common_card_five_bottom">
+                            <div class="common_card_five_bottom_left">
+                                <p>4.8/5 Excellent</p>
+                                <h6>(1214 reviewes)</h6>
+                            </div>
+                            <div class="common_card_five_bottom_right">
+                                <h4>$99.00 <sub>/Per person</sub></h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="common_card_five">
+                    <div class="common_card_five_img">
+                        <a href="tour-search.html">
+                            <img src="~/assets/img/tour/popular-7.png" alt="img">
+                        </a>
+                    </div>
+                    <div class="common_card_five_text">
+                        <ul class="common_card_five_list">
+                            <li>7 nights 8 days tour <i class="fas fa-circle"></i></li>
+                            <li>Family tour</li>
+                        </ul>
+                        <h3><a href="tour-search.html">Elit deserunt amet enim adipisic</a></h3>
+                        <p><i class="fas fa-map-marker-alt"></i>London, United Kingdom</p>
+                        <div class="common_card_five_bottom">
+                            <div class="common_card_five_bottom_left">
+                                <p>4.8/5 Excellent</p>
+                                <h6>(1214 reviewes)</h6>
+                            </div>
+                            <div class="common_card_five_bottom_right">
+                                <h4>$99.00 <sub>/Per person</sub></h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="common_card_five">
+                    <div class="common_card_five_img">
+                        <a href="tour-search.html">
+                            <img src="~/assets/img/tour/popular-8.png" alt="img">
+                        </a>
+                    </div>
+                    <div class="common_card_five_text">
+                        <ul class="common_card_five_list">
+                            <li>7 nights 8 days tour <i class="fas fa-circle"></i></li>
+                            <li>Family tour</li>
+                        </ul>
+                        <h3><a href="tour-search.html">Magna magna id laboris ea</a></h3>
+                        <p><i class="fas fa-map-marker-alt"></i>London, United Kingdom</p>
+                        <div class="common_card_five_bottom">
+                            <div class="common_card_five_bottom_left">
+                                <p>4.8/5 Excellent</p>
+                                <h6>(1214 reviewes)</h6>
+                            </div>
+                            <div class="common_card_five_bottom_right">
+                                <h4>$99.00 <sub>/Per person</sub></h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="top_place_btn">
+                    <a class="btn btn_theme btn_md" href="top-destinations.html">View all destinations</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- why choose -->
+<section id="best_travel_section" class="section_padding_bottom">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="section_heading_five">
+                    <h5>Why choose us</h5>
+                    <h2>We Are Best Tour & Travel Agency in the World.</h2>
+                    <p>
+                        Laboris anim duis sunt aliquip tempor qui. Est in nulla eiusmod ad aliqua laboris jugni lol
+                        hip kill occaecat excepteur voluptate. Eiusmod enim ea minim occaecat.
+                    </p>
+                </div>
+                <div class="best_travel_list">
+                    <ul class="travel_list_item">
+                        <li>
+                            <img src="~/assets/img/icon/theam-check.png" alt="icon">Est in nulla eiusmod ad aliqua.
+                        </li>
+                        <li><img src="~/assets/img/icon/theam-check.png" alt="icon">Non pariatur sint culpa.</li>
+                        <li>
+                            <img src="~/assets/img/icon/theam-check.png" alt="icon">Eiusmod in nulla ead aliqua blul.
+                        </li>
+                        <li>
+                            <img src="~/assets/img/icon/theam-check.png" alt="icon">Culpa nisi ullamco reprehrit et.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="best_travel_img text-center">
+                    <img src="~/assets/img/home-five/common/best-travel.png" alt="img">
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-12 col-sm-12">
+                <div class="benifit_list_wrapper">
+                    <div class="benefit_list">
+                        <div class="location_img">
+                            <img src="~/assets/img/icon/locations.png" alt="icon">
+                        </div>
+                        <div class="benefit_text">
+                            <h3>Tour guide</h3>
+                            <p>
+                                Eiusmod enim ea minim occaecat in occaecat occaecat. Adipisicing velit aute duis
+                                pariatur.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="benefit_list">
+                        <div class="price_img">
+                            <img src="~/assets/img/icon/prices.png" alt="icon">
+                        </div>
+                        <div class="benefit_text">
+                            <h3>Friendly price</h3>
+                            <p>
+                                Adipisicing velit aute duis pariatur minim officia officia velit nostrud ipsum
+                                ullamco
+                                anim.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="benefit_list">
+                        <div class="calendar_img">
+                            <img src="~/assets/img/icon/calender.png" alt="icon">
+                        </div>
+                        <div class="benefit_text">
+                            <h3>Instant booking</h3>
+                            <p>
+                                Adipisicing velit aute duis pariatur minim officia officia velit nostrud ipsum
+                                ullamco
+                                anim.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- process area -->
+<section id="process-area" class="section_padding">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-12">
+                <div class="section_heading_five">
+                    <h5>Our process</h5>
+                    <h2>Revolutionizing the way of travelling</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="process_card text-center">
+                    <img src="~/assets/img/home-five/process/process-1.png" alt="img">
+                    <h3><a href="#!">Search anything you want</a></h3>
+                    <p>
+                        Laboris anim duis sunt aliquip tempor qui. Est in nulla eiusmod ad aliqua laboris jugni lol
+                        hip kill occaecat excepteur voluptate ea minim occaecat.
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="process_card text-center">
+                    <img src="~/assets/img/home-five/process/process-2.png" alt="img">
+                    <h3><a href="#!">Purchase the tour and packages</a></h3>
+                    <p>
+                        Laboris anim duis sunt aliquip tempor qui. Est in nulla eiusmod ad aliqua laboris jugni lol
+                        hip kill occaecat excepteur voluptate ea minim occaecat.
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="process_card text-center">
+                    <img src="~/assets/img/home-five/process/process-3.png" alt="img">
+                    <h3><a href="#!">Enjoy the amazing trip</a></h3>
+                    <p>
+                        Laboris anim duis sunt aliquip tempor qui. Est in nulla eiusmod ad aliqua laboris jugni lol
+                        hip kill occaecat excepteur voluptate ea minim occaecat.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- nearby destination -->
+<section id="Nearby_destination" class="section_padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="section_heading_five">
+                    <h5>Nearby destination</h5>
+                    <h2>Move around you at anytime</h2>
+                </div>
+            </div>
+        </div>
+        <div class="destination_five_slider button_style_top_left owl-theme owl-carousel">
+            <div class="common_card_five">
+                <div class="common_card_five_img">
+                    <a href="tour-search.html">
+                        <img src="~/assets/img/tour/popular-1.png" alt="img">
+                    </a>
+                </div>
+                <div class="common_card_five_text">
+                    <ul class="common_card_five_list">
+                        <li>7 nights 8 days tour <i class="fas fa-circle"></i></li>
+                        <li>Family tour</li>
+                    </ul>
+                    <h3><a href="tour-search.html">London aliqua irure proident esse</a></h3>
+                    <p><i class="fas fa-map-marker-alt"></i>London, United Kingdom</p>
+                    <div class="common_card_five_bottom">
+                        <div class="common_card_five_bottom_left">
+                            <p>4.8/5 Excellent</p>
+                            <h6>(1214 reviewes)</h6>
+                        </div>
+                        <div class="common_card_five_bottom_right">
+                            <h4>$99.00 <sub>/Per person</sub></h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="common_card_five">
+                <div class="common_card_five_img">
+                    <a href="tour-search.html">
+                        <img src="~/assets/img/tour/popular-2.png" alt="img">
+                    </a>
+                </div>
+                <div class="common_card_five_text">
+                    <ul class="common_card_five_list">
+                        <li>7 nights 8 days tour <i class="fas fa-circle"></i></li>
+                        <li>Family tour</li>
+                    </ul>
+                    <h3><a href="tour-search.html">Sydney irure dolor anim exerciton</a></h3>
+                    <p><i class="fas fa-map-marker-alt"></i>London, United Kingdom</p>
+                    <div class="common_card_five_bottom">
+                        <div class="common_card_five_bottom_left">
+                            <p>4.8/5 Excellent</p>
+                            <h6>(1214 reviewes)</h6>
+                        </div>
+                        <div class="common_card_five_bottom_right">
+                            <h4>$99.00 <sub>/Per person</sub></h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="common_card_five">
+                <div class="common_card_five_img">
+                    <a href="tour-search.html">
+                        <img src="~/assets/img/tour/popular-3.png" alt="img">
+                    </a>
+                </div>
+                <div class="common_card_five_text">
+                    <ul class="common_card_five_list">
+                        <li>7 nights 8 days tour <i class="fas fa-circle"></i></li>
+                        <li>Family tour</li>
+                    </ul>
+                    <h3><a href="tour-search.html">Phuket non ullamco amet dolore</a></h3>
+                    <p><i class="fas fa-map-marker-alt"></i>London, United Kingdom</p>
+                    <div class="common_card_five_bottom">
+                        <div class="common_card_five_bottom_left">
+                            <p>4.8/5 Excellent</p>
+                            <h6>(1214 reviewes)</h6>
+                        </div>
+                        <div class="common_card_five_bottom_right">
+                            <h4>$99.00 <sub>/Per person</sub></h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="common_card_five">
+                <div class="common_card_five_img">
+                    <a href="tour-search.html">
+                        <img src="~/assets/img/tour/popular-4.png" alt="img">
+                    </a>
+                </div>
+                <div class="common_card_five_text">
+                    <ul class="common_card_five_list">
+                        <li>7 nights 8 days tour <i class="fas fa-circle"></i></li>
+                        <li>Family tour</li>
+                    </ul>
+                    <h3><a href="tour-search.html">Gangtok magna amet voluptate</a></h3>
+                    <p><i class="fas fa-map-marker-alt"></i>London, United Kingdom</p>
+                    <div class="common_card_five_bottom">
+                        <div class="common_card_five_bottom_left">
+                            <p>4.8/5 Excellent</p>
+                            <h6>(1214 reviewes)</h6>
+                        </div>
+                        <div class="common_card_five_bottom_right">
+                            <h4>$99.00 <sub>/Per person</sub></h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="common_card_five">
+                <div class="common_card_five_img">
+                    <a href="tour-search.html">
+                        <img src="~/assets/img/tour/popular-2.png" alt="img">
+                    </a>
+                </div>
+                <div class="common_card_five_text">
+                    <ul class="common_card_five_list">
+                        <li>7 nights 8 days tour <i class="fas fa-circle"></i></li>
+                        <li>Family tour</li>
+                    </ul>
+                    <h3><a href="tour-search.html">Sydney irure dolor anim exerciton</a></h3>
+                    <p><i class="fas fa-map-marker-alt"></i>London, United Kingdom</p>
+                    <div class="common_card_five_bottom">
+                        <div class="common_card_five_bottom_left">
+                            <p>4.8/5 Excellent</p>
+                            <h6>(1214 reviewes)</h6>
+                        </div>
+                        <div class="common_card_five_bottom_right">
+                            <h4>$99.00 <sub>/Per person</sub></h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="common_card_five">
+                <div class="common_card_five_img">
+                    <a href="tour-search.html">
+                        <img src="~/assets/img/tour/popular-3.png" alt="img">
+                    </a>
+                </div>
+                <div class="common_card_five_text">
+                    <ul class="common_card_five_list">
+                        <li>7 nights 8 days tour <i class="fas fa-circle"></i></li>
+                        <li>Family tour</li>
+                    </ul>
+                    <h3><a href="tour-search.html">Phuket non ullamco amet dolore</a></h3>
+                    <p><i class="fas fa-map-marker-alt"></i>London, United Kingdom</p>
+                    <div class="common_card_five_bottom">
+                        <div class="common_card_five_bottom_left">
+                            <p>4.8/5 Excellent</p>
+                            <h6>(1214 reviewes)</h6>
+                        </div>
+                        <div class="common_card_five_bottom_right">
+                            <h4>$99.00 <sub>/Per person</sub></h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="common_card_five">
+                <div class="common_card_five_img">
+                    <a href="tour-search.html">
+                        <img src="~/assets/img/tour/popular-4.png" alt="img">
+                    </a>
+                </div>
+                <div class="common_card_five_text">
+                    <ul class="common_card_five_list">
+                        <li>7 nights 8 days tour <i class="fas fa-circle"></i></li>
+                        <li>Family tour</li>
+                    </ul>
+                    <h3><a href="tour-search.html">Gangtok magna amet voluptate</a></h3>
+                    <p><i class="fas fa-map-marker-alt"></i>London, United Kingdom</p>
+                    <div class="common_card_five_bottom">
+                        <div class="common_card_five_bottom_left">
+                            <p>4.8/5 Excellent</p>
+                            <h6>(1214 reviewes)</h6>
+                        </div>
+                        <div class="common_card_five_bottom_right">
+                            <h4>$99.00 <sub>/Per person</sub></h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- download area -->
+<section id="download_area">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-5">
+                <div class="app_download_right">
+                    <div class="section_heading_five">
+                        <h5>Download app</h5>
+                        <h2>
+                            Get 20% discount on your
+                            app installation and first tour
+                            booking
+                        </h2>
+                        <p>
+                            Laboris anim duis sunt aliquip tempor qui. Est in nulla eiusmod ad aliqua laboris jugni
+                            lol
+                            hip kill occaecat excepteur voluptate ea minim occaecat.
+                        </p>
+                    </div>
+                    <div class="app_download_area">
+                        <div class="apple_app">
+                            <a href="#!"><img src="~/assets/img/home-five/common/apple.png" alt="img"></a>
+                        </div>
+                        <div class="play_store_app">
+                            <a href="#!"><img src="~/assets/img/home-five/common/play-store.png" alt="img"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-7">
+                <div class="phone_img">
+                    <img src="~/assets/img/home-five/common/phone.png" alt="img">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Our partners Area -->
+<section id="our_partners" class="section_padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="partner_slider_area owl-theme owl-carousel">
+                    <div class="partner_logo">
+                        <a href="#!"><img src="~/assets/img/partner/1.png" alt="logo"></a>
+                    </div>
+                    <div class="partner_logo">
+                        <a href="#!"><img src="~/assets/img/partner/2.png" alt="logo"></a>
+                    </div>
+                    <div class="partner_logo">
+                        <a href="#!"><img src="~/assets/img/partner/3.png" alt="logo"></a>
+                    </div>
+                    <div class="partner_logo">
+                        <a href="#!"><img src="~/assets/img/partner/4.png" alt="logo"></a>
+                    </div>
+                    <div class="partner_logo">
+                        <a href="#!"><img src="~/assets/img/partner/5.png" alt="logo"></a>
+                    </div>
+                    <div class="partner_logo">
+                        <a href="#!"><img src="~/assets/img/partner/6.png" alt="logo"></a>
+                    </div>
+                    <div class="partner_logo">
+                        <a href="#!"><img src="~/assets/img/partner/7.png" alt="logo"></a>
+                    </div>
+                    <div class="partner_logo">
+                        <a href="#!"><img src="~/assets/img/partner/8.png" alt="logo"></a>
+                    </div>
+                    <div class="partner_logo">
+                        <a href="#!"><img src="~/assets/img/partner/5.png" alt="logo"></a>
+                    </div>
+                    <div class="partner_logo">
+                        <a href="#!"><img src="~/assets/img/partner/3.png" alt="logo"></a>
+                    </div>
+                    <div class="partner_logo">
+                        <a href="#!"><img src="~/assets/img/partner/2.png" alt="logo"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+

@@ -1,0 +1,102 @@
+﻿<div class="pagetitle">
+    <h1>Dashboard</h1>
+    <nav>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item active">Schedule</li>
+        </ol>
+    </nav>
+</div><!-- End Page Title -->
+
+<section class="section dashboard">
+    <div class="row">
+        <div class="col-12">
+            <div class="card top-selling overflow-auto">
+
+                <div class="card-body pb-4">
+                    <h5 class="card-title">Make schedule</h5>
+                    @model AR_System.Models.FlightSchedule
+                    <!-- Vertical Form -->
+                    <form method="post" asp-action="Create" class="row g-3">
+                        <div class="col-12">
+                            <label asp-for="FlightId" class="form-label">Flight Number</label>
+                            <select class="form-select" asp-for="FlightId">
+                                <option selected></option>
+                                @if (ViewBag.flights != null)
+                                {
+                                    foreach (var flight in ViewBag.flights)
+                                    {
+                                        <option class="text-capitalize" value="@flight.Id">@flight.FlightNumber</option>
+                                    }
+                                }
+                                else
+                                {
+                                    <option>No flights available</option>
+                                }
+                            </select>
+                            <span asp-validation-for="FlightId" class="text-danger"></span>
+
+                        </div>
+                        <div class="col-12">
+                            <label asp-for="ToCityId" class="form-label">From</label>
+                            <select class="form-select" asp-for="FromCityId">
+                                <option selected></option>
+                                @if (ViewBag.locations != null)
+                                {
+                                    foreach (var location in ViewBag.locations)
+                                    {
+                                        <option class="text-capitalize" value="@location.Id">
+                                            <span>@location.PortName,</span>
+                                            <span>@location.CityName</span>
+                                        </option>
+                                    }
+                                }
+                                else
+                                {
+                                    <option>No locations available</option>
+                                }
+
+                            </select>
+                            <span asp-validation-for="ToCityId" class="text-danger"></span>
+                        </div>
+                        <div class="col-12">
+                            <label asp-for="ToCityId" class="form-label">To</label>
+                            <select class="form-select" asp-for="ToCityId">
+                                <option selected></option>
+                                @if (ViewBag.locations != null)
+                                {
+                                    foreach (var location in ViewBag.locations)
+                                    {
+                                        <option class="text-capitalize" value="@location.Id">
+                                            <span>@location.PortName,</span>
+                                            <span>@location.CityName</span>
+                                        </option>
+                                    }
+                                }
+
+                            </select>
+                            <span asp-validation-for="ToCityId" class="text-danger"></span>
+                        </div>
+                        <div class="col-12">
+                            <label asp-for="DepartureTime" class="form-label">Departure Time</label>
+                            <input type="datetime-local" class="form-control" asp-for="DepartureTime" />
+                            <span asp-validation-for="DepartureTime" class="text-danger"></span>
+                            </div>
+                        <div class="col-12">
+                            <label asp-for="ArrivalTime" class="form-label">Arrival Time</label>
+                            <input type="datetime-local" class="form-control" asp-for="ArrivalTime" />
+                            <span asp-validation-for="ArrivalTime" class="text-danger"></span>
+                        </div>  
+                        <div class="col-12">
+                            <label asp-for="Stops" class="form-label">Stops</label>
+                            <input class="input_number form-control" type="number" asp-for="Stops" />
+                            <span asp-validation-for="Stops" class="text-danger"></span>
+                        </div>
+                        <div class="text-right">
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <button type="reset" class="btn btn-secondary">Reset</button>
+                        </div>
+                    </form><!-- Vertical Form -->
+
+
+                </div>
