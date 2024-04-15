@@ -4,10 +4,10 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="common_bannner_text">
-                    <h2>Scheduled Flights</h2>
+                    <h2>Search Result</h2>
                     <ul>
                         <li><a href="index-2.html">Home</a></li>
-                        <li><span><i class="fas fa-circle"></i></span> Scheduled flights</li>
+                        <li><span><i class="fas fa-circle"></i></span> Search Result</li>
                     </ul>
                 </div>
             </div>
@@ -190,7 +190,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="flight_search_result_wrapper">
-                            @foreach (var flight_schedules in ViewBag.flights)
+                            @foreach (var searched_flights in ViewBag.searched_flights)
                             {
                                 <div class="flight_search_item_wrappper">
                                     <div class="flight_search_items">
@@ -202,24 +202,24 @@
                                                     </div>
                                                     <div class="flight_search_destination">
                                                         <p>From</p>
-                                                        <h3>@flight_schedules.FromCity.CityName</h3>
-                                                        <h6>@flight_schedules.FromCity.PortName</h6>
+                                                        <h3>@searched_flights.FromCity.CityName</h3>
+                                                        <h6>@searched_flights.FromCity.PortName</h6>
                                                     </div>
                                                 </div>
                                                 <div class="flight_search_middel">
                                                     <div class="flight_right_arrow">
                                                         <img src="~/assets/img/icon/right_arrow.png" alt="icon">
 
-                                                        @if (flight_schedules.Stops == 0)
+                                                        @if (searched_flights.Stops == 0)
                                                         {
                                                             <h6>Non-Stop</h6>
                                                         }
                                                         else
                                                         {
-                                                            <h6>Stops: @flight_schedules.Stops</h6>
+                                                            <h6>Stops: @searched_flights.Stops</h6>
                                                         }
                                                         @{
-                                                            TimeSpan duration = flight_schedules.ArrivalTime - flight_schedules.DepartureTime;
+                                                            TimeSpan duration = searched_flights.ArrivalTime - searched_flights.DepartureTime;
                                                             int totalHours = (int)duration.TotalHours;
                                                             int totalMinutes = duration.Minutes;
                                                             string formattedDuration = $"{totalHours} hours {totalMinutes} minutes";
@@ -229,15 +229,15 @@
                                                     </div>
                                                     <div class="flight_search_destination">
                                                         <p>To</p>
-                                                        <h3>@flight_schedules.ToCity.CityName</h3>
-                                                        <h6>@flight_schedules.ToCity.PortName</h6>
+                                                        <h3>@searched_flights.ToCity.CityName</h3>
+                                                        <h6>@searched_flights.ToCity.PortName</h6>
                                                     </div>
                                                 </div>
                                             </div>
 
                                         </div>
                                         <div class="flight_search_right">
-                                            @foreach (var ticketClass in flight_schedules.TicketClasses)
+                                            @foreach (var ticketClass in searched_flights.TicketClasses)
                                             {
                                                 @if (ticketClass.EconomyPrice == null)
                                                 {
@@ -249,7 +249,7 @@
                                                 }
 
                                             }
-                                            <a asp-controller="Booking" asp-action="Book_Flight" asp-route-id="@flight_schedules.Id" class="btn btn_theme btn_sm">
+                                            <a asp-controller="Booking" asp-action="Book_Flight" asp-route-id="@searched_flights.Id" class="btn btn_theme btn_sm">
                                                 Book
                                                 now
                                             </a>
