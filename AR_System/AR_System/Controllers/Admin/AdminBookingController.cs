@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Security.Claims;
 
 namespace AR_System.Controllers.Admin
 {
@@ -16,8 +17,15 @@ namespace AR_System.Controllers.Admin
         }
         public IActionResult Index()
         {
-            ViewBag.bookings = database.Bookings.Include(fs => fs.User).Include(fs => fs.Schedule).ThenInclude(schedule => schedule.FromCity).Include(fs => fs.Schedule)
-        .ThenInclude(schedule => schedule.ToCity).ToList();
+
+            var bookingsForCurrentUser = database.Bookings
+            .Include(b => b.Schedule)
+            .ThenInclude(s => s.FromCity)
+            .Include(b => b.Schedule)
+            .ThenInclude(s => s.ToCity)
+            .ToList();
+
+            ViewBag.bookings = bookingsForCurrentUser;
             return View();
         }
     }

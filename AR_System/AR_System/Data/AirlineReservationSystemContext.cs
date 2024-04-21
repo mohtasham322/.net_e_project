@@ -55,16 +55,15 @@ public partial class AirlineReservationSystemContext : DbContext
                 .IsUnicode(false)
                 .HasColumnName("ticket_class");
             entity.Property(e => e.TotalPrice).HasColumnName("total_price");
-            entity.Property(e => e.UserId).HasColumnName("user_id");
+            entity.Property(e => e.UserEmail)
+                .HasMaxLength(255)
+                .IsUnicode(false)
+                .HasColumnName("user_email");
             entity.Property(e => e.VisaNumber).HasColumnName("visa_number");
 
             entity.HasOne(d => d.Schedule).WithMany(p => p.Bookings)
                 .HasForeignKey(d => d.ScheduleId)
                 .HasConstraintName("fk_schedule_id");
-
-            entity.HasOne(d => d.User).WithMany(p => p.Bookings)
-                .HasForeignKey(d => d.UserId)
-                .HasConstraintName("fk_user_id");
         });
 
         modelBuilder.Entity<CityWay>(entity =>

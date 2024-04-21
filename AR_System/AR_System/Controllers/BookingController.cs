@@ -7,6 +7,7 @@ using System.Security.Claims;
 
 namespace AR_System.Controllers
 {
+    [Authorize(Roles = "User")]
     public class BookingController : Controller
     {
         private readonly AirlineReservationSystemContext database;
@@ -27,33 +28,50 @@ namespace AR_System.Controllers
                 return NotFound();
             }
 
-            var ticketClasses = database.TicketClasses.Where(tc => tc.ScheduleId == id).ToList();
+            var ticketClasses = database.TicketClasses.ToList();
 
             ViewBag.ticketclasses = ticketClasses;
             return View();
         }
-        [Authorize(Roles = "User")]
         [HttpPost]
         public IActionResult Book_Flight(Booking booking, int? id)
         {
             if (User.Identity.IsAuthenticated)
             {
-                var userIdClaim = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier);
-
-                if (userIdClaim != null)
+                var userEmailClaim = User.FindFirst(ClaimTypes.Email);
+                if (userEmailClaim != null)
                 {
-                        if (int.TryParse(userIdClaim.Value, out int userId))
-                        {
-                        booking.UserId = userId;
-                        database.Bookings.Add(booking);
-                        database.SaveChanges();
+                    string userEmail = userEmailClaim.Value;
+                    booking.UserEmail = userEmail;
+                    int ticketClass;
+                    if (!int.TryParse(booking.TicketClass, out ticketClass))
+                    {
+                        ticketClass = 0; 
                     }
+                    int? noOfTickets = booking.NoOfTickets ?? 0; 
+
+                    booking.TotalPrice = ticketClass * noOfTickets;
+
+                    booking.ScheduleId = id;
+                    database.Bookings.Add(booking);
+                    database.SaveChanges();
+                    TempData["toastr_success"] = "Your flight has been booked successfully!";
                     return RedirectToAction("Index", "Home");
                 }
-
+                else
+                {
+                    TempData["error"] = "Booking failed !";
+                    return RedirectToAction("Error", "Home");
+                }
             }
-            return View();
+            else
+            {
+                return View();
+            }
         }
+
+
+
 
 
 

@@ -20,38 +20,40 @@
                     <table class="table table-borderless">
                         <thead>
                             <tr>
-                                <th scope="col">FirstName</th>
-                                <th scope="col">LastName</th>
-                                <th scope="col">Email</th>
-                                <th scope="col">From</th>
-                                <th scope="col">To</th>
-                                <th scope="col">Departure</th>
-                                <th scope="col">Arrival</th>
-                                <th scope="col">Ticket Class</th>
-                                <th scope="col">No of tickets</th>
-                                <th scope="col">Visa</th>
-                                <th scope="col">Passport</th>
-                                <th scope="col">Payment Method</th>
-                                <th scope="col">Booking Date</th>
+                                <th>Sl no.</th>
+                                <th>Email</th>
+                                <th>Departure</th>
+                                <th>Arrival</th>
+                                <th>Passport No.</th>
+                                <th>Visa No.</th>
+                                <th>Ticket Class</th>
+                                <th>No of tickets</th>
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach(var booking in ViewBag.bookings)
+                            @{
+                                int serialNumber = 1;
+                            }
+                            @foreach (var booking in ViewBag.bookings)
                             {
                                 <tr>
-                                    <td>@booking.User.FirstName</td>
-                                    <td>@booking.User.LastName</td>
-                                    <td>@booking.User.Email</td>
-                                    <td>@booking.Schedule.FromCity.CityName</td>
-                                    <td>@booking.Schedule.ToCity.CityName</td>
-                                    <td>@booking.Schedule.DepartureTime</td>
-                                    <td>@booking.Schedule.ArrivalTime</td>
-                                    <td>@booking.TicketClass </td>
-                                    <td>@booking.NoOfTickets</td>
-                                    <td>@booking.VisaNumber</td>
+                                    <td>@serialNumber</td>
+                                    <td>@booking.UserEmail</td>
+                                    <td>
+                                        @(booking.Schedule.FromCity.CityName)<br />
+                                        <span>@booking.Schedule.DepartureTime</span>
+                                    </td>
+                                    <td>
+                                        @(booking.Schedule.ToCity.CityName)<br />
+                                        <span>@booking.Schedule.ArrivalTime</span>
+                                    </td>
                                     <td>@booking.PassportNumber</td>
-                                    <td>@booking.PaymentMethod</td>
+                                    <td>@booking.VisaNumber</td>
+                                    <td>$@booking.TicketClass per ticket</td>
+                                    <td>@booking.NoOfTickets</td>
                                 </tr>
+
+                                serialNumber++;
                             }
                         </tbody>
                     </table>

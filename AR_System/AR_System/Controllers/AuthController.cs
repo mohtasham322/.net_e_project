@@ -72,7 +72,7 @@ namespace AR_System.Controllers
                     identity = new ClaimsIdentity(new[]
                     {
                         new Claim(ClaimTypes.Email, user.Email),
-                        new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
+                        new Claim(ClaimTypes.NameIdentifier, result.Id.ToString()),
                         new Claim(ClaimTypes.Role, "User"),
                         new Claim(ClaimTypes.Name, firstName)
                     },
@@ -97,7 +97,7 @@ namespace AR_System.Controllers
                 }
             }
             TempData["error"] = "email or password is invalid !";
-            return View("Login");
+            return RedirectToAction("Login");
         }
 
         public IActionResult Logout()

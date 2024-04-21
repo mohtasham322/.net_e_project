@@ -33,48 +33,34 @@
                             <thead>
                                 <tr>
                                     <th>Sl no.</th>
-                                    <th>Booking ID</th>
-                                    <th>Booking amount</th>
-                                    <th>Status</th>
+                                    <th>Departure</th>
+                                    <th>Arrival</th>
+                                    <th>Ticket Class</th>
+                                    <th>No of tickets</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>01.</td>
-                                    <td>#JK589V80</td>
-                                    <td>$754.00</td>
-                                    <td class="complete">Completed</td>
-                                </tr>
-                                <tr>
-                                    <td>02.</td>
-                                    <td>#JK589V80</td>
-                                    <td>$754.00</td>
-                                    <td class="complete">Completed</td>
-                                </tr>
-                                <tr>
-                                    <td>03.</td>
-                                    <td>#JK589V80</td>
-                                    <td>$754.00</td>
-                                    <td class="complete">Completed</td>
-                                </tr>
-                                <tr>
-                                    <td>04.</td>
-                                    <td>#JK589V80</td>
-                                    <td>$754.00</td>
-                                    <td class="complete">Completed</td>
-                                </tr>
-                                <tr>
-                                    <td>05.</td>
-                                    <td>#JK589V80</td>
-                                    <td>$754.00</td>
-                                    <td class="cancele">Canceled</td>
-                                </tr>
-                                <tr>
-                                    <td>06.</td>
-                                    <td>#JK589V80</td>
-                                    <td>$754.00</td>
-                                    <td class="complete">Completed</td>
-                                </tr>
+                                @{
+                                    int serialNumber = 1;
+                                }
+                                @foreach (var booking in ViewBag.bookings)
+                                {
+                                    <tr>
+                                        <td>@serialNumber</td>
+                                        <td>@(booking.Schedule.FromCity.CityName)<br />
+                                            <span>@booking.Schedule.DepartureTime</span>
+                                        </td>
+                                        <td>@(booking.Schedule.ToCity.CityName)<br />
+                                            <span>@booking.Schedule.ArrivalTime</span>
+                                        </td>
+                                        <td>$@booking.TicketClass per ticket</td>
+                                        <td>@booking.NoOfTickets</td>
+                                    </tr>
+
+                                    serialNumber++;
+                                }
+
+                                
                             </tbody>
                         </table>
                     </div>

@@ -32,137 +32,108 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="tab-content" id="myTabContent">
-                        <div class="tab-pane fade show active" id="flights" role="tabpanel"
-                             aria-labelledby="flights-tab">
+                    <div class="tab-content" id="myTabContent1">
+                        <div class="tab-pane fade show active" id="oneway_flight" role="tabpanel"
+                             aria-labelledby="oneway-tab">
                             <div class="row">
                                 <div class="col-lg-12">
-                                    <div class="flight_categories_search">
-                                        <ul class="nav nav-tabs" role="tablist">
-                                            <li class="nav-item" role="presentation">
-                                                <button class="nav-link active" id="oneway-tab" data-bs-toggle="tab"
-                                                        data-bs-target="#oneway_flight" type="button" role="tab"
-                                                        aria-controls="oneway_flight" aria-selected="true">
-                                                    One
-                                                    Way
-                                                </button>
-                                            </li>
-                                            <li class="nav-item" role="presentation">
-                                                <button class="nav-link" id="roundtrip-tab" data-bs-toggle="tab"
-                                                        data-bs-target="#roundtrip" type="button" role="tab"
-                                                        aria-controls="roundtrip"
-                                                        aria-selected="false">
-                                                    Roundtrip
-                                                </button>
-                                            </li>
-                                        </ul>
+                                    <div class="oneway_search_form">
+                                        <form asp-controller="FlightSearch" asp-action="Search">
+                                            <div class="row">
+                                                <div class="col-lg-4 col-md-6 col-sm-12 col-12">
+                                                    <div class="flight_Search_boxed">
+                                                        <p>From</p>
+                                                        <input type="text" value="London" name="from_city">
+                                                        <span>London Southend</span>
+                                                        <div class="plan_icon_posation">
+                                                            <i class="fas fa-plane-departure"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-4 col-md-6 col-sm-12 col-12">
+                                                    <div class="flight_Search_boxed">
+                                                        <p>To</p>
+                                                        <input type="text" value="Karachi" name="to_city">
+                                                        <span>Jinnah International Airport</span>
+                                                        <div class="plan_icon_posation">
+                                                            <i class="fas fa-plane-arrival"></i>
+                                                        </div>
+                                                        <div class="range_plan">
+                                                            <i class="fas fa-exchange-alt"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-4  col-md-6 col-sm-12 col-12">
+                                                    <div class="form_search_date">
+                                                        <div class="flight_Search_boxed date_flex_area">
+                                                            <div class="Journey_date">
+                                                                <p>Journey date</p>
+                                                                <input type="date" value="2022-05-05">
+                                                                <span>Thursday</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="top_form_search_button">
+                                                    <button class="btn btn_theme btn_md">Search</button>
+                                                </div>
+                                            </div>
+                                        </form>
                                     </div>
                                 </div>
                             </div>
-                            <div class="tab-content" id="myTabContent1">
-                                <div class="tab-pane fade show active" id="oneway_flight" role="tabpanel"
-                                     aria-labelledby="oneway-tab">
-                                    <div class="row">
-                                        <div class="col-lg-12">
-                                            <div class="oneway_search_form">
-                                                <form action="#!">
-                                                    <div class="row">
-                                                        <div class="col-lg-4 col-md-6 col-sm-12 col-12">
-                                                            <div class="flight_Search_boxed">
-                                                                <p>From</p>
-                                                                <input type="text" value="New York">
-                                                                <span>JFK - John F. Kennedy International...</span>
-                                                                <div class="plan_icon_posation">
-                                                                    <i class="fas fa-plane-departure"></i>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-lg-4 col-md-6 col-sm-12 col-12">
-                                                            <div class="flight_Search_boxed">
-                                                                <p>To</p>
-                                                                <input type="text" value="London ">
-                                                                <span>LCY, London city airport </span>
-                                                                <div class="plan_icon_posation">
-                                                                    <i class="fas fa-plane-arrival"></i>
-                                                                </div>
-                                                                <div class="range_plan">
-                                                                    <i class="fas fa-exchange-alt"></i>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-lg-4  col-md-6 col-sm-12 col-12">
-                                                            <div class="form_search_date">
-                                                                <div class="flight_Search_boxed date_flex_area">
-                                                                    <div class="Journey_date">
-                                                                        <p>Journey date</p>
-                                                                        <input type="date" value="2022-05-05">
-                                                                        <span>Thursday</span>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="top_form_search_button">
-                                                            <button class="btn btn_theme btn_md">Search</button>
+                        </div>
+                        <div class="tab-pane fade" id="roundtrip" role="tabpanel"
+                             aria-labelledby="roundtrip-tab">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="oneway_search_form">
+                                        <form asp-controller="FlightSearch" asp-controller="Search">
+                                            <div class="row">
+                                                <div class="col-lg-4  col-md-6 col-sm-12 col-12">
+                                                    <div class="flight_Search_boxed">
+                                                        <p>From</p>
+                                                        <input type="text" value="New York" name="from_city">
+                                                        <span>London Southend</span>
+                                                        <div class="plan_icon_posation">
+                                                            <i class="fas fa-plane-departure"></i>
                                                         </div>
                                                     </div>
-                                                </form>
+                                                </div>
+                                                <div class="col-lg-4  col-md-6 col-sm-12 col-12">
+                                                    <div class="flight_Search_boxed">
+                                                        <p>To</p>
+                                                        <input type="text" value="London " name="to_city">
+                                                        <span>Jinnah International Airport</span>
+                                                        <div class="plan_icon_posation">
+                                                            <i class="fas fa-plane-arrival"></i>
+                                                        </div>
+                                                        <div class="range_plan">
+                                                            <i class="fas fa-exchange-alt"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-4  col-md-6 col-sm-12 col-12">
+                                                    <div class="form_search_date">
+                                                        <div class="flight_Search_boxed date_flex_area">
+                                                            <div class="Journey_date">
+                                                                <p>Journey date</p>
+                                                                <input type="date" value="2022-05-05">
+                                                                <span>Thursday</span>
+                                                            </div>
+                                                            <div class="Journey_date">
+                                                                <p>Return date</p>
+                                                                <input type="date" value="2022-05-08">
+                                                                <span>Saturday</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="tab-pane fade" id="roundtrip" role="tabpanel"
-                                     aria-labelledby="roundtrip-tab">
-                                    <div class="row">
-                                        <div class="col-lg-12">
-                                            <div class="oneway_search_form">
-                                                <form action="#!">
-                                                    <div class="row">
-                                                        <div class="col-lg-4  col-md-6 col-sm-12 col-12">
-                                                            <div class="flight_Search_boxed">
-                                                                <p>From</p>
-                                                                <input type="text" value="New York">
-                                                                <span>JFK - John F. Kennedy International...</span>
-                                                                <div class="plan_icon_posation">
-                                                                    <i class="fas fa-plane-departure"></i>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-lg-4  col-md-6 col-sm-12 col-12">
-                                                            <div class="flight_Search_boxed">
-                                                                <p>To</p>
-                                                                <input type="text" value="London ">
-                                                                <span>LCY, London city airport </span>
-                                                                <div class="plan_icon_posation">
-                                                                    <i class="fas fa-plane-arrival"></i>
-                                                                </div>
-                                                                <div class="range_plan">
-                                                                    <i class="fas fa-exchange-alt"></i>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-lg-4  col-md-6 col-sm-12 col-12">
-                                                            <div class="form_search_date">
-                                                                <div class="flight_Search_boxed date_flex_area">
-                                                                    <div class="Journey_date">
-                                                                        <p>Journey date</p>
-                                                                        <input type="date" value="2022-05-05">
-                                                                        <span>Thursday</span>
-                                                                    </div>
-                                                                    <div class="Journey_date">
-                                                                        <p>Return date</p>
-                                                                        <input type="date" value="2022-05-08">
-                                                                        <span>Saturday</span>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="top_form_search_button">
-                                                        <button class="btn btn_theme btn_md">Search</button>
-                                                    </div>
-                                                </form>
+                                            <div class="top_form_search_button">
+                                                <button class="btn btn_theme btn_md" type="submit">Search</button>
                                             </div>
-                                        </div>
+                                        </form>
                                     </div>
                                 </div>
                             </div>
@@ -203,7 +174,8 @@
                                                     <div class="flight_search_destination">
                                                         <p>From</p>
                                                         <h3>@searched_flights.FromCity.CityName</h3>
-                                                        <h6>@searched_flights.FromCity.PortName</h6>
+                                                        <h6>@searched_flights.FromCity.PortName</h6><br />
+                                                        <span>@searched_flights.DepartureTime</span>
                                                     </div>
                                                 </div>
                                                 <div class="flight_search_middel">
@@ -230,23 +202,17 @@
                                                     <div class="flight_search_destination">
                                                         <p>To</p>
                                                         <h3>@searched_flights.ToCity.CityName</h3>
-                                                        <h6>@searched_flights.ToCity.PortName</h6>
+                                                        <h6>@searched_flights.ToCity.PortName</h6><br />
+                                                        <span>@searched_flights.ArrivalTime</span>
                                                     </div>
                                                 </div>
                                             </div>
 
                                         </div>
                                         <div class="flight_search_right">
-                                            @foreach (var ticketClass in searched_flights.TicketClasses)
+                                            @foreach (var ticketClass in ViewBag.ticketClass)
                                             {
-                                                @if (ticketClass.EconomyPrice == null)
-                                                {
-                                                    <h2>no price</h2>
-                                                }
-                                                else
-                                                {
                                                     <h2>$ @ticketClass.EconomyPrice</h2>
-                                                }
 
                                             }
                                             <a asp-controller="Booking" asp-action="Book_Flight" asp-route-id="@searched_flights.Id" class="btn btn_theme btn_sm">
@@ -260,9 +226,6 @@
                             }
 
                             <!-- Flight Search Item -->
-                        </div>
-                        <div class="load_more_flight">
-                            <button class="btn btn_md"><i class="fas fa-spinner"></i> Load more..</button>
                         </div>
                     </div>
                 </div>
