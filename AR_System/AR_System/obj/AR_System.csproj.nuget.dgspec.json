@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\TEHNOSELLERS\\Documents\\AR_System\\AR_System\\AR_System.csproj": {}
+    "C:\\Users\\TEHNOSELLERS\\Documents\\.net_e_project\\AR_System\\AR_System\\AR_System.csproj": {}
   },
   "projects": {
-    "C:\\Users\\TEHNOSELLERS\\Documents\\AR_System\\AR_System\\AR_System.csproj": {
+    "C:\\Users\\TEHNOSELLERS\\Documents\\.net_e_project\\AR_System\\AR_System\\AR_System.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\TEHNOSELLERS\\Documents\\AR_System\\AR_System\\AR_System.csproj",
+        "projectUniqueName": "C:\\Users\\TEHNOSELLERS\\Documents\\.net_e_project\\AR_System\\AR_System\\AR_System.csproj",
         "projectName": "AR_System",
-        "projectPath": "C:\\Users\\TEHNOSELLERS\\Documents\\AR_System\\AR_System\\AR_System.csproj",
+        "projectPath": "C:\\Users\\TEHNOSELLERS\\Documents\\.net_e_project\\AR_System\\AR_System\\AR_System.csproj",
         "packagesPath": "C:\\Users\\TEHNOSELLERS\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\TEHNOSELLERS\\Documents\\AR_System\\AR_System\\obj\\",
+        "outputPath": "C:\\Users\\TEHNOSELLERS\\Documents\\.net_e_project\\AR_System\\AR_System\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\TEHNOSELLERS\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "0fbdfz15AUKtoFjhHOBe3PW56j3AJvs86QWhomfqU3otsKJ+s7jmrpEBKbCVCjtPNddLP/LzZaB4SP3cO7ZMYw==",
+  "dgSpecHash": "PyoN14juLlEG1j9hTZ7wYKfD+8gJG8VoW3kY1nm7D1OoP1ZOGsbIHJvFcSr3bYthqxtXL3qhmLM0FzG79q+Alw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\TEHNOSELLERS\\Documents\\AR_System\\AR_System\\AR_System.csproj",
+  "projectFilePath": "C:\\Users\\TEHNOSELLERS\\Documents\\.net_e_project\\AR_System\\AR_System\\AR_System.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\TEHNOSELLERS\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\TEHNOSELLERS\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
